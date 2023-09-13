@@ -1,5 +1,6 @@
 package hr.algebra.spacex.di
 
+import android.app.Application
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
@@ -32,7 +33,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideSpaceXDatabase(app: SpaceXApplication): SpaceXDatabase {
+    fun provideSpaceXDatabase(app: Application): SpaceXDatabase {
         return Room.databaseBuilder(
             app,
             SpaceXDatabase::class.java,

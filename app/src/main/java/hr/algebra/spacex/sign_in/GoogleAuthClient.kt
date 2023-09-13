@@ -3,10 +3,12 @@ package hr.algebra.spacex.sign_in
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import hr.algebra.spacex.R
 
 import hr.algebra.spacex2.presentation.sign_in.SignInResult
 import hr.algebra.spacex2.presentation.sign_in.UserData
@@ -20,7 +22,7 @@ class GoogleAuthClient(
     private val auth = Firebase.auth
 
     suspend fun signIn(): IntentSender? {
-        /*val result = try {
+        val result = try {
             oneTapClient.beginSignIn(
                 buildSignInRequest()
             ).await()
@@ -28,8 +30,8 @@ class GoogleAuthClient(
             e.printStackTrace()
             if (e is CancellationException) throw e
             null
-        }*/
-        //return result?.pendingIntent?.intentSender
+        }
+        return result?.pendingIntent?.intentSender
         return null;
     }
 
@@ -78,7 +80,7 @@ class GoogleAuthClient(
         )
     }
 
-    /*private fun buildSignInRequest(): BeginSignInRequest {
+    private fun buildSignInRequest(): BeginSignInRequest {
         return BeginSignInRequest.builder()
             .setGoogleIdTokenRequestOptions(
                 BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
@@ -89,5 +91,5 @@ class GoogleAuthClient(
             )
             .setAutoSelectEnabled(true)
             .build()
-    }*/
+    }
 }

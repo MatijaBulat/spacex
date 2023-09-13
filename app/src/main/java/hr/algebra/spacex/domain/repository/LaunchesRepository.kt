@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 interface LaunchesRepository {
-    fun saveLaunches(): Flow<Resource<Nothing>>
+    suspend fun saveLaunches(): Resource<Nothing>
 
     suspend fun getLaunches(): List<Launch>
 }

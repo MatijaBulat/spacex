@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import hr.algebra.spacex.presentation.save_launches.SaveLaunchesViewModel
+import hr.algebra.spacex.databinding.ActivityMainBinding
+import hr.algebra.spacex.presentation.splash.SplashViewModel
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private val viewModel: SaveLaunchesViewModel by viewModels()
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        viewModel.saveLaunches()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

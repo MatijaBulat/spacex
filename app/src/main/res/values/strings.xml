@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SpaceX</string>
     <string name="web_client_id">903759019949-ihhe6s3b14qnlsqiqi3cto9cpiib0ukc.apps.googleusercontent.com</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

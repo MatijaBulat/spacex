@@ -9,7 +9,7 @@ import javax.inject.Inject
 class SaveLaunchesUseCase @Inject constructor(
     private val repository: LaunchesRepository
 ) {
-    operator fun invoke(): Flow<Resource<Nothing>>  {
+    suspend operator fun invoke(): Resource<Nothing>  {
         return repository.saveLaunches()
     }
 }

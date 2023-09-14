@@ -1,4 +1,4 @@
-package hr.algebra.spacex.sign_in
+package hr.algebra.spacex.presentation.sign_in
 
 import android.content.Context
 import android.content.Intent
@@ -10,8 +10,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import hr.algebra.spacex.R
 
-import hr.algebra.spacex2.presentation.sign_in.SignInResult
-import hr.algebra.spacex2.presentation.sign_in.UserData
 import kotlinx.coroutines.tasks.await
 import java.util.concurrent.CancellationException
 

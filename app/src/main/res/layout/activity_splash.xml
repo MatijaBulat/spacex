@@ -13,5 +13,5 @@
         android:id="@+id/ivSplash"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/splashIvHeight"
-        android:src="@drawable/elon_musk_final"/>
+        android:src="@drawable/elon_musk"/>
 </LinearLayout>

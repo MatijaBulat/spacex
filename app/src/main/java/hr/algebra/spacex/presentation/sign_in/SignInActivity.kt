@@ -3,6 +3,7 @@ package hr.algebra.spacex.presentation.sign_in
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -34,6 +35,7 @@ class SignInActivity : AppCompatActivity() {
 
         googleAuthUiClient = GoogleAuthClient(applicationContext, Identity.getSignInClient(applicationContext))
         if(googleAuthUiClient.getSignedInUser() != null) {
+            binding.btnSignIn.visibility = View.GONE
             println("pozz brate")
             Toast.makeText(this, "${googleAuthUiClient.getSignedInUser()!!.userName} logged in", Toast.LENGTH_SHORT).show()
         }

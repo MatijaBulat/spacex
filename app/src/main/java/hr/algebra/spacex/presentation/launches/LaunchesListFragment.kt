@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import hr.algebra.spacex.R
 import hr.algebra.spacex.databinding.FragmentLaunchesListBinding
 import hr.algebra.spacex.domain.model.Launch
@@ -53,7 +54,9 @@ class LaunchesListFragment : Fragment() {
             //navigate
             findNavController().navigate(R.id.action_launchesListFragment_to_launchDetailsFragment)
         }
+        binding.rvItems.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = launchesAdapter
+        }
     }
-
-
 }

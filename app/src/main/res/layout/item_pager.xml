@@ -9,24 +9,24 @@
     <ImageView
         android:id="@+id/ivItem"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="@dimen/pagerImageHeight"
         tools:src="@drawable/elon_musk_blunt" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="@dimen/pagerTitleMarginH"
+        android:layout_marginVertical="@dimen/pagerTitleMarginV"
         android:text="insert title"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/pagerTitleTextSize"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp">
+        android:layout_marginHorizontal="@dimen/pagerDateMarginH">
 
         <TextView
             android:layout_width="0dp"
@@ -50,20 +50,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="@dimen/pagerDescMarginH"
+        android:layout_marginTop="@dimen/pagerDescMarginT"
+        android:layout_marginBottom="@dimen/pagerDescMarginB"
         android:text="Description"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/pagerDescTextSize"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:textColor="@android:color/white"
+        android:layout_marginHorizontal="@dimen/pagerDescMarginH"
+        android:textColor="@android:color/darker_gray"
         tools:text="insert description" />
 
 </LinearLayout>

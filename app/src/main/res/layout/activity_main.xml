@@ -21,7 +21,7 @@ tools:context=".MainActivity">
     app:itemTextColor="@android:color/black"
     android:layout_gravity="start"
     app:menu="@menu/navigation_menu"
-    android:layout_width="162dp"
+    android:layout_width="@dimen/mainActNavigationWidth"
     android:layout_height="wrap_content" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.Coil
 import coil.load
+import coil.transform.CircleCropTransformation
+import coil.transform.RoundedCornersTransformation
 import hr.algebra.spacex.R
 import hr.algebra.spacex.domain.model.Launch
 
@@ -28,12 +30,11 @@ class LaunchesRecyclerAdapter(
             }
         }
 
-
         fun bind(launch: Launch) {
             ivListItemImg.load(launch.launchImagePath) {
-
                 error(R.drawable.elon_musk)
                 placeholder(R.drawable.elon_musk)
+                transformations(CircleCropTransformation())
             }
             tvListItemTitle.text = launch.name
             tvListItemDate.text = launch.launchDate
@@ -60,5 +61,4 @@ class LaunchesRecyclerAdapter(
     override fun getItemCount(): Int {
         return launches.size
     }
-
 }

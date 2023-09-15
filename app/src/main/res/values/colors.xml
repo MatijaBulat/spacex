@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cardBackgroundColor">#20000000</color>
+    <color name="listItemBackgroundColor">#40AAAAAA</color>
+    <color name="splashBackgroundColor">#000000</color>
+    <color name="signInBtnBackgroundColor">#FFFFFF</color>
 </resources>

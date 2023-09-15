@@ -32,7 +32,6 @@ class LaunchesViewModel @Inject constructor(
         selectedLaunchIndex = launchId
     }
 
-
     fun getLaunches() {
         viewModelScope.launch {
             getLaunchesUseCase()
@@ -44,13 +43,11 @@ class LaunchesViewModel @Inject constructor(
                             )
                             launches = result.data ?: emptyList()
                         }
-
                         is Resource.Error -> {
                             _state.value = LaunchesState(
                                 error = result.message ?: "An unexpected error occured"
                             )
                         }
-
                         is Resource.Loading -> {
                             _state.value = state.value.copy(
                                 isLoading = true

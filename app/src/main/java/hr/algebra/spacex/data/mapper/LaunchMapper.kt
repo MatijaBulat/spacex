@@ -14,16 +14,6 @@ fun LaunchEntity.toLaunch(): Launch {
     )
 }
 
-/*fun Launch.toLaunchEntity(): LaunchEntity {
-    return LaunchEntity(
-        _id = _id,
-        launchDate = launchDate,
-        name = name,
-        details = details,
-        launchImagePath =  launchImagePath
-    )
-}*/
-
 fun LaunchDtoItem.toLaunchEntity(): LaunchEntity {
     return LaunchEntity(
         _id = null,

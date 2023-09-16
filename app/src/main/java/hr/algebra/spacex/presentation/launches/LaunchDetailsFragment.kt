@@ -34,7 +34,6 @@ class LaunchDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setObserver()
         viewModel.getSelectedLaunchIndexAndLaunchesList()
-
     }
 
     private fun setObserver() {
@@ -55,5 +54,4 @@ class LaunchDetailsFragment : Fragment() {
         binding.viewPager.adapter = LaunchesViewPagerAdapter(launches)
         binding.viewPager.currentItem = selectedIndex
     }
-
 }

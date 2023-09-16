@@ -60,7 +60,7 @@ class GoogleAuthClient(
         }
     }
 
-    suspend fun signOut() {
+ /*   suspend fun signOut() {
         try {
             oneTapClient.signOut().await()
             auth.signOut()
@@ -68,7 +68,7 @@ class GoogleAuthClient(
             e.printStackTrace()
             if (e is CancellationException) throw  e
         }
-    }
+    }*/
 
     fun getSignedInUser(): UserData? = auth.currentUser?.run {
         UserData(
